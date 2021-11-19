@@ -1,11 +1,12 @@
 from bs4 import BeautifulSoup
+from getpass import getpass
 from playwright.sync_api import sync_playwright
 from myKoob.get_tasks import get_tasks
 from myKoob.format_tasks import format_tasks
 
 def get_mykoob_tasks():
     email = input("enter email: ")
-    password = input("enter password: ")
+    password = getpass("enter password: ")
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False, slow_mo=50)
