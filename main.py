@@ -8,7 +8,7 @@ def get_data():
     tasks = None
 
     if task_page.lower() == "a":
-        pass
+        print("Comming soon")
     elif task_page.lower() == "b":
         tasks = get_mykoob_tasks()
     else:
