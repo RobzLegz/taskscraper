@@ -7,9 +7,9 @@ def get_data():
     task_page = input("select Your task page: ")
     tasks = None
 
-    if task_page == "A":
+    if task_page.lower() == "a":
         pass
-    elif task_page == "B":
+    elif task_page.lower() == "b":
         tasks = get_mykoob_tasks()
     else:
         get_data()
